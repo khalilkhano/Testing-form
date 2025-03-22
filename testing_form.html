@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Testing Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 50px;
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Repository Testing Form</h2>
+        
+        <form action="#" method="post">
+            <div class="section">
+                <label>Repository Name:</label>
+                <input type="text" name="repo_name" required>
+            </div>
+
+            <div class="section">
+                <label>Repository URL:</label>
+                <input type="url" name="repo_url" required>
+            </div>
+
+            <div class="section">
+                <label>Tester Name:</label>
+                <input type="text" name="tester_name" required>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <label>1. Is the repository accessible?</label>
+                <div class="checkbox-group">
+                    <input type="radio" name="repo_accessibility" value="Pass" required> Pass
+                    <input type="radio" name="repo_accessibility" value="Fail"> Fail
+                </div>
+                <textarea name="repo_accessibility_comments" placeholder="Comments..."></textarea>
+            </div>
+
+            <div class="section">
+                <label>2. Is there a README file?</label>
+                <div class="checkbox-group">
+                    <input type="radio" name="readme" value="Pass" required> Pass
+                    <input type="radio" name="readme" value="Fail"> Fail
+                </div>
+                <textarea name="readme_comments" placeholder="Comments..."></textarea>
+            </div>
+
+            <div class="section">
+                <label>3. Does the project build successfully?</label>
+                <div class="checkbox-group">
+                    <input type="radio" name="build_success" value="Pass" required> Pass
+                    <input type="radio" name="build_success" value="Fail"> Fail
+                </div>
+                <textarea name="build_success_comments" placeholder="Comments..."></textarea>
+            </div>
+
+            <div class="section">
+                <label>4. Are there automated tests?</label>
+                <div class="checkbox-group">
+                    <input type="radio" name="automated_tests" value="Pass" required> Pass
+                    <input type="radio" name="automated_tests" value="Fail"> Fail
+                </div>
+                <textarea name="automated_tests_comments" placeholder="Comments..."></textarea>
+            </div>
+
+            <div class="section">
+                <label>5. Is error handling implemented properly?</label>
+                <div class="checkbox-group">
+                    <input type="radio" name="error_handling" value="Pass" required> Pass
+                    <input type="radio" name="error_handling" value="Fail"> Fail
+                </div>
+                <textarea name="error_handling_comments" placeholder="Comments..."></textarea>
+            </div>
+
+            <div class="section">
+                <label>6. Are dependencies properly managed?</label>
+                <div class="checkbox-group">
+                    <input type="radio" name="dependencies" value="Pass" required> Pass
+                    <input type="radio" name="dependencies" value="Fail"> Fail
+                </div>
+                <textarea name="dependencies_comments" placeholder="Comments..."></textarea>
+            </div>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </div>
+
+</body>
+</html>
